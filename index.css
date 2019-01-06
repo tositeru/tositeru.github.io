@@ -12,8 +12,15 @@ body, html {
     position: relative;
 }
 
-.root:after {
+.clear-float:after {
+    content: '';
     clear: both;
+    display: block;
+}
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 0px;
 }
 
 /*
@@ -24,6 +31,7 @@ body, html {
     height: 20%;
     margin-right: 25px;
     z-index: 1000;
+    margin-bottom: 10px;
 }
 
 .information:after {
@@ -103,7 +111,7 @@ body, html {
 .contents-root {
     width: 93%;
     height: 70%;
-    margin-left: 46px;
+    margin-left: 2%;
     background-color: #f5f5f5;
     padding: 5px 15px;
 }
@@ -115,10 +123,6 @@ body, html {
     border: 1px solid #000;
     width: 97%; 
 }
-.profile h2 {
-    font-size: 48px;
-    margin-bottom: 0px;
-}
 .profile p {
     font-size: 28px;
 }
@@ -128,11 +132,8 @@ body, html {
 */
 .make-games .border{
     border: 1px solid #000;
-    width: 97%; 
-}
-.make-games h2 {
-    font-size: 48px;
-    margin-bottom: 0px;
+    width: 97%;
+    margin-bottom: 10px;
 }
 
 .game {
@@ -140,14 +141,18 @@ body, html {
     float: left;
     margin: 0px 10px;
     text-align: center;
+    box-shadow: 0px 0px 6px 6px #dcdcdc;
+    border-radius: 5px;
 }
+
 .game h3 {
     font-size: 28px;
     margin-bottom: 0px;
 }
 .game img {
-    max-width: 300px;
-    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
+    max-height: 230px;
 }
 .game p {
     font-size: 16px;
@@ -169,3 +174,83 @@ body, html {
     z-index: 0;
 }
 
+/* for tablet */
+@media all and (max-width: 1032px) {
+    .root {
+        height: auto;
+    }
+    .contents-root {
+        margin-left: 1%;
+        height: auto;
+    }
+    .contents-root:after {
+        clear: both;
+    }
+    .information h1 {
+        font-size: 72px;
+        height: 48px;
+        letter-spacing: 10px;
+    }
+    
+    /*
+        メニュー
+    */
+    .menu-list {
+        width: 97%;
+        margin: 2%;
+        position: static;
+    }
+    
+    /* profile */
+    .profile p {
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+    .QR-list li {
+        margin: 0px 50px;
+    }
+    .QR-list p {
+        margin: 0px 0px;
+    }
+    .QR-image {
+        width: 200px;
+    }
+
+    /* 作ったゲーム */
+    .make-games h2 {
+        font-size: 48px;
+        margin: 0px 0px;
+    }
+    
+    .game {
+        width: 80%;
+        float: none;
+        margin: 0px 10%;
+        text-align: center;
+    }
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+    .information h1 {
+        font-size: 30px;
+        height: 28px;
+        letter-spacing: 10px;
+    }
+    .contents-root {
+        padding: 5px 0.7px;
+        margin: 0px 11px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    .menu-item {
+        font-size: 24px;
+    }
+
+    .QR-list {
+        padding-inline-start: 0px;
+    }
+}

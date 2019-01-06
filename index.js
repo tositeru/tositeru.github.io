@@ -1,7 +1,7 @@
 var informationCom = {
     template: `
         <div class="information">
-            <span>
+            <span class>
             <a href="https://github.com/tositeru"><i class="fab fa-github"></i></a>
             <a href="https://twitter.com/tosi_teru"><i class="fab fa-twitter"></i></a>
             </span>
@@ -33,7 +33,7 @@ var menuListCom = {
         }
     },
     template: `
-        <div class="menu-list">
+        <div class="menu-list clear-float">
             <div class="menu-item"
                  v-for="item in list"
                  v-bind:obj="item"
@@ -58,11 +58,10 @@ var topContentCom = {
             <h2>プロフィール</h2>
             <div class="border"></div>
             <section>
-                <p>個人でゲームをつくってます。</p>
-                <p>プログラミングが一番得意です。</p>
+                <p>個人でゲームを作っているプログラマーです。</p>
             </section>
             <section>
-                <ul class="QR-list">
+                <ul class="QR-list clear-float">
                 <li>
                 <p><a v-bind:href="this.unityroom">Unityroom</a></p>
                 <img class="QR-image"src="./images/QR_URL_unityroom.png">
@@ -78,7 +77,7 @@ var topContentCom = {
 };
 var makeGameContentCom = {
     template: `
-        <div class="contents-root make-games">
+        <div class="contents-root make-games clear-float">
             <h2>作ったもの</h2>
             <div class="border"></div>
 
