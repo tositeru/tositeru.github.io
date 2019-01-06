@@ -1,12 +1,12 @@
 var informationCom = {
     template: `
         <div class="information">
+            <span>
+            <a href="https://github.com/tositeru"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/tosi_teru"><i class="fab fa-twitter"></i></a>
+            </span>
             <h1>tositeru</h1>
             <div class="border"></div>
-            <span>
-              <a href="https://github.com/tositeru"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com/tosi_teru"><i class="fab fa-twitter"></i></a>
-            </span>
         </div>
     `
 };
@@ -47,6 +47,12 @@ var menuListCom = {
 
 // 簡単なプロフィール
 var topContentCom = {
+    data: function() {
+        return {
+            unityroom: "https://unityroom.com/users/qlvip7zeumg4hs0dnxc9",
+            itch: "https://tositeru.itch.io/",
+        }
+    },
     template: `
         <div class="contents-root profile">
             <h2>プロフィール</h2>
@@ -58,11 +64,11 @@ var topContentCom = {
             <section>
                 <ul class="QR-list">
                 <li>
-                <p>Unityroom</p>
+                <p><a v-bind:href="this.unityroom">Unityroom</a></p>
                 <img class="QR-image"src="./images/QR_URL_unityroom.png">
                 </li>
                 <li>
-                <p>itch.io</p>
+                <p><a v-bind:href="this.itch">itch.io</a></p>
                 <img class="QR-image"src="./images/QR_URL_itch.png">
                 </li>
                 </ul>
@@ -80,7 +86,7 @@ var makeGameContentCom = {
                  v-bind:obj="game"
                  v-bind:key="game.id"
                  class="game">
-                 <h3><a href=game.url>{{game.title}}</a></h3>
+                 <h3><a v-bind:href="game.url">{{game.title}}</a></h3>
                  <img v-bind:src=game.image>
                  <p>
                  {{game.description}}
