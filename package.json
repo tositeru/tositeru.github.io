@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-community-typescript",
+  "version": "2.3.4",
+  "private": true,
+  "dependencies": {
+    "@nuxtjs/axios": "5.3.6",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.1.0",
+    "nuxt": "2.3.4",
+    "nuxt-property-decorator": "1.3.1",
+    "prettier": "^1.16.4",
+    "vuex-class": "0.3.1"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "5.3.3",
+    "typescript": "3.2.4"
+  }
+}

@@ -1,0 +1,251 @@
+body, html {
+    height: 100%;
+    background-color: #777777;
+}
+
+.root {
+    background-color: #FFFFFF;
+    width: 80%;
+    height: 95%;
+    margin: auto auto;
+    box-shadow: 0px 0px 0px 3px #e4e4e4;
+    position: relative;
+}
+
+.clear-float:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+h2 {
+    font-size: 48px;
+    margin: 0px auto;
+}
+
+/*
+    基本情報
+*/
+
+.information {
+    height: 20%;
+    margin-right: 25px;
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+.information:after {
+    clear: right;
+}
+
+.information h1 {
+    font-size: 128px;
+    font-style: italic;
+    margin-top: 0px;
+    text-align: right;
+    letter-spacing: 10px;
+    border-bottom: 2px solid black;
+    margin-bottom: 12px;
+}
+.information .border {
+    border: 1px solid #000;
+    float: right;
+    width: 97%;
+}
+
+.information span {
+    font-size: 36px;
+    margin: 0px 0px 0px 0px;
+    float: right;
+    z-index: 1000;
+}
+.information a:link {
+    color: #000;
+}
+.information a:visited {
+    color: #000;
+}
+
+.QR-list {
+    list-style: none;
+}
+.QR-list li {
+    float: left;
+    text-align: center;
+    margin: 0px 50px;
+}
+.QR-list p {
+    margin: 0px 0px;
+}
+.QR-image {
+    width: 250px;
+    float: left;
+}
+
+/*
+    メニュー
+*/
+.menu-list {
+  margin: 0 auto;
+    width: 97%;
+}
+
+.menu-item {
+    background-color: #cacaca;
+    float: left;
+    font-size: 36px;
+    width: 49%;
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+.menu-item:hover {
+    background-color: #dbdbdb;
+}
+
+/*
+    コンテンツ
+*/
+.contents-root {
+    width: 93%;
+    height: 70%;
+    margin-left: 2%;
+    background-color: #f5f5f5;
+    padding: 5px 15px;
+}
+
+/*
+    プロフィール
+*/
+.profile .border {
+    border: 1px solid #000;
+    width: 97%;
+}
+.profile p {
+    font-size: 28px;
+}
+
+/*
+    作ったゲーム
+*/
+.make-games .border{
+    border: 1px solid #000;
+    width: 97%;
+    margin-bottom: 10px;
+}
+
+.game {
+    width: 22%;
+    float: left;
+    margin: 0px 10px;
+    text-align: center;
+    box-shadow: 0px 0px 6px 6px #dcdcdc;
+    border-radius: 5px;
+}
+
+.game h3 {
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+.game img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 230px;
+}
+.game p {
+    font-size: 16px;
+    width: 90%;
+}
+
+.main-content-enter-active {
+    transition: opacity .5s;
+}
+.main-content-enter {
+    opacity: 0;
+    z-index: 0;
+}
+.main-content-leave-active {
+    transition: opacity .5s;
+}
+.main-content-leave-to {
+    opacity: 0;
+    z-index: 0;
+}
+
+/* for tablet */
+@media all and (max-width: 1032px) {
+    .root {
+        height: auto;
+    }
+    .contents-root {
+        margin-left: 1%;
+        height: auto;
+    }
+    .contents-root:after {
+        clear: both;
+    }
+    .information h1 {
+        font-size: 72px;
+        letter-spacing: 10px;
+    }
+
+    /*
+        メニュー
+    */
+    .menu-list {
+        width: 97%;
+        margin: 2%;
+        position: static;
+    }
+
+    /* profile */
+    .profile p {
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+    .QR-list li {
+        margin: 0px 50px;
+    }
+    .QR-list p {
+        margin: 0px 0px;
+    }
+    .QR-image {
+        width: 200px;
+    }
+
+    /* 作ったゲーム */
+    .make-games h2 {
+        font-size: 48px;
+        margin: 0px 0px;
+    }
+
+    .game {
+        width: 80%;
+        float: none;
+        margin: 0px 10%;
+        text-align: center;
+    }
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+    .information h1 {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .contents-root {
+        padding: 5px 0.7px;
+        margin: 0px 11px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    .menu-item {
+        font-size: 24px;
+    }
+
+    .QR-list {
+        padding-inline-start: 0px;
+    }
+}
