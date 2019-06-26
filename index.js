@@ -1,12 +1,13 @@
 var informationCom = {
     template: `
         <div class="information">
-            <span class>
-            <a href="https://github.com/tositeru"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/tosi_teru"><i class="fab fa-twitter"></i></a>
-            </span>
-            <h1>tositeru</h1>
-            <div class="border"></div>
+            <div class="remove-margin row between-xs">
+                <div class="">
+                    <a href="https://github.com/tositeru"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/tosi_teru"><i class="fab fa-twitter"></i></a>
+                </div>
+                <h1>tositeru</h1>
+            </div>
         </div>
     `
 };
@@ -47,31 +48,11 @@ var menuListCom = {
 
 // 簡単なプロフィール
 var topContentCom = {
-    data: function() {
-        return {
-            unityroom: "https://unityroom.com/users/qlvip7zeumg4hs0dnxc9",
-            itch: "https://tositeru.itch.io/",
-        }
-    },
     template: `
         <div class="contents-root profile">
             <h2>プロフィール</h2>
             <div class="border"></div>
-            <section>
-                <p>個人でゲームを作っているプログラマーです。</p>
-            </section>
-            <section>
-                <ul class="QR-list clear-float">
-                <li>
-                <p><a v-bind:href="this.unityroom">Unityroom</a></p>
-                <img class="QR-image"src="./images/QR_URL_unityroom.png">
-                </li>
-                <li>
-                <p><a v-bind:href="this.itch">itch.io</a></p>
-                <img class="QR-image"src="./images/QR_URL_itch.png">
-                </li>
-                </ul>
-            </section>
+            <p>個人でゲームを作っているプログラマーです。</p>
         </div>
     `
 };
@@ -138,6 +119,31 @@ var makeGameContentCom = {
     }
 };
 
+var linksCom = {
+    data: function() {
+        return {
+            unityroom: "https://unityroom.com/users/qlvip7zeumg4hs0dnxc9",
+            itch: "https://tositeru.itch.io/",
+        }
+    },
+    template: `
+        <div class="contents-root link">
+            <h2>リンク</h2>
+            <div class="border"></div>
+            <section class="row center-xs">
+                <div class="QRCode">
+                    <img class="QR-image"src="./images/QR_URL_unityroom.png">
+                    <p><a v-bind:href="unityroom">Unityroom</a></p>
+                </div>
+                <div class="QRCode">
+                    <img class="QR-image"src="./images/QR_URL_itch.png">
+                    <p><a v-bind:href="itch">itch.io</a></p>
+                </div>
+            </section>
+        </div>
+    `
+};
+
 var app = new Vue({
     el: "#root",
     data: function() {
@@ -150,6 +156,7 @@ var app = new Vue({
         "menu-list": menuListCom,
         "content-top": topContentCom,
         "content-make-game": makeGameContentCom,
+        "links": linksCom,
     },
     // methods: {},
     computed: {

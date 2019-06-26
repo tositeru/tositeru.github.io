@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>tositeru</title>
+        <link rel="stylesheet" href="./flexboxgrid-6.3.1/css/flexboxgrid.min.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="./index.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -10,12 +11,11 @@
     <body>
         <div id="root" class="root clear-float">
             <information></information>
-            <transition name="main-content" mode="out-in">
-                <component
-                    v-bind:is="currentContentsComponent">
-                </component>
-            </transition>
-            <menu-list></menu-list>
+            <div class="border"></div>
+            <content-top></content-top>
+            <content-make-game></content-make-game>
+            <links></links>
+            <div class="border"></div>
         </div>
         <script src="./index.js"></script>
     </body>
